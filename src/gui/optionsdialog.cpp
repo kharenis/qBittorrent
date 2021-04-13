@@ -1257,7 +1257,7 @@ void OptionsDialog::loadOptions()
     m_ui->spinBanCounter->setValue(pref->getWebUIMaxAuthFailCount());
     m_ui->spinBanDuration->setValue(pref->getWebUIBanDuration().count());
     m_ui->spinSessionTimeout->setValue(pref->getWebUISessionTimeout());
-    m_ui->textWebUIBasePath->setValue(pref->getWebUIBasePath());
+    m_ui->textWebUIBasePath->setText(pref->getWebUIBasePath());
 
     // Security
     m_ui->checkClickjacking->setChecked(pref->isWebUiClickjackingProtectionEnabled());
