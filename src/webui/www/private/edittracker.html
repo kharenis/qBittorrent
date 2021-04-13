@@ -40,7 +40,7 @@
                 new Event(e).stop();
                 const hash = new URI().getData('hash');
                 new Request({
-                    url: '${BASEPATH}/api/v2p/torrents/editTracker',
+                    url: '${BASEPATH}/api/v2/torrents/editTracker',
                     method: 'post',
                     data: {
                         hash: hash,

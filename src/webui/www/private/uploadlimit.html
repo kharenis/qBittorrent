@@ -29,7 +29,7 @@
                 const limit = $("uplimitUpdatevalue").value.toInt() * 1024;
                 if (hashes[0] == "global") {
                     new Request({
-                        url: '${BASEPATH}/api/v2p/transfer/setUploadLimit',
+                        url: '${BASEPATH}/api/v2/transfer/setUploadLimit',
                         method: 'post',
                         data: {
                             'limit': limit
@@ -42,7 +42,7 @@
                 }
                 else {
                     new Request({
-                        url: '${BASEPATH}/api/v2p/torrents/setUploadLimit',
+                        url: '${BASEPATH}/api/v2/torrents/setUploadLimit',
                         method: 'post',
                         data: {
                             'hashes': hashes.join('|'),

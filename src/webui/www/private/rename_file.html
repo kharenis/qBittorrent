@@ -62,7 +62,7 @@
                     ? parentPath + window.qBittorrent.Filesystem.PathSeparator + newName
                     : newName;
                 new Request({
-                    url: isFolder ? '${BASEPATH}/api/v2p/torrents/renameFolder' : '${BASEPATH}/api/v2p/torrents/renameFile',
+                    url: isFolder ? '${BASEPATH}/api/v2/torrents/renameFolder' : '${BASEPATH}/api/v2/torrents/renameFile',
                     method: 'post',
                     data: {
                         hash: hash,

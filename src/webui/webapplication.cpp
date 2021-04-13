@@ -371,7 +371,7 @@ void WebApplication::configure()
 
     if(!m_basePath.isEmpty())
     {
-        m_apiPathPattern = QRegularExpression(m_basePath + m_defaultApiPathPattern);// {QLatin1String("^/${BASEPATH}/api/v2p/(?<scope>[A-Za-z_][A-Za-z_0-9]*)/(?<action>[A-Za-z_][A-Za-z_0-9]*)$")};
+        m_apiPathPattern = QRegularExpression(m_basePath + m_defaultApiPathPattern);// {QLatin1String("^/${BASEPATH}/api/v2/(?<scope>[A-Za-z_][A-Za-z_0-9]*)/(?<action>[A-Za-z_][A-Za-z_0-9]*)$")};
     }
     else
     {

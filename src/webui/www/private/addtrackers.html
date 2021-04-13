@@ -30,7 +30,7 @@
                 new Event(e).stop();
                 const hash = new URI().getData('hash');
                 new Request({
-                    url: '${BASEPATH}/api/v2p/torrents/addTrackers',
+                    url: '${BASEPATH}/api/v2/torrents/addTrackers',
                     method: 'post',
                     data: {
                         hash: hash,

@@ -70,7 +70,7 @@
                             return;
 
                         new Request({
-                            url: '${BASEPATH}/api/v2p/torrents/createCategory',
+                            url: '${BASEPATH}/api/v2/torrents/createCategory',
                             method: 'post',
                             data: {
                                 category: categoryName,
@@ -78,7 +78,7 @@
                             },
                             onSuccess: function() {
                                 new Request({
-                                    url: '${BASEPATH}/api/v2p/torrents/setCategory',
+                                    url: '${BASEPATH}/api/v2/torrents/setCategory',
                                     method: 'post',
                                     data: {
                                         hashes: uriHashes,
@@ -99,7 +99,7 @@
                             return;
 
                         new Request({
-                            url: '${BASEPATH}/api/v2p/torrents/createCategory',
+                            url: '${BASEPATH}/api/v2/torrents/createCategory',
                             method: 'post',
                             data: {
                                 category: categoryName,
@@ -112,7 +112,7 @@
                         break;
                     case "edit":
                         new Request({
-                            url: '${BASEPATH}/api/v2p/torrents/editCategory',
+                            url: '${BASEPATH}/api/v2/torrents/editCategory',
                             method: 'post',
                             data: {
                                 category: uriCategoryName, // category name can't be changed

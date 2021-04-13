@@ -190,7 +190,7 @@
 
         const init = () => {
             new Request.JSON({
-                url: '${BASEPATH}/api/v2p/app/preferences',
+                url: '${BASEPATH}/api/v2/app/preferences',
                 method: 'get',
                 noCache: true,
                 onFailure: () => {
@@ -445,7 +445,7 @@
 
         const updateRssFeedList = () => {
             new Request.JSON({
-                url: '${BASEPATH}/api/v2p/rss/items',
+                url: '${BASEPATH}/api/v2/rss/items',
                 noCache: true,
                 method: 'post',
                 data: {
@@ -667,7 +667,7 @@
             rssFeedTable.updateIcons();
 
             new Request({
-                url: '${BASEPATH}/api/v2p/rss/refreshItem',
+                url: '${BASEPATH}/api/v2/rss/refreshItem',
                 noCache: true,
                 method: 'post',
                 data: {
@@ -745,7 +745,7 @@
 
             // send request
             new Request({
-                url: '${BASEPATH}/api/v2p/rss/markAsRead',
+                url: '${BASEPATH}/api/v2/rss/markAsRead',
                 noCache: true,
                 method: 'post',
                 data: {
@@ -786,7 +786,7 @@
                 rssFeedTable.updateTable(true);
 
                 new Request({
-                    url: '${BASEPATH}/api/v2p/rss/markAsRead',
+                    url: '${BASEPATH}/api/v2/rss/markAsRead',
                     noCache: true,
                     method: 'post',
                     data: {

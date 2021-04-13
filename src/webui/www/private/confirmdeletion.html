@@ -23,7 +23,7 @@
             $('confirmBtn').addEvent('click', function(e) {
                 parent.torrentsTable.deselectAll();
                 new Event(e).stop();
-                const cmd = '${BASEPATH}/api/v2p/torrents/delete';
+                const cmd = '${BASEPATH}/api/v2/torrents/delete';
                 const deleteFiles = $('deleteFromDiskCB').get('checked');
                 new Request({
                     url: cmd,
