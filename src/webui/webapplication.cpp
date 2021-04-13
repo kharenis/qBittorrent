@@ -160,7 +160,7 @@ void WebApplication::sendWebUIFile()
     {
         (request().path != QLatin1String("/")
                 ? request().path
-                : QLatin1String("/index.html"))
+                : QLatin1String(m_basePath + "/index.html"))
     };
 
     QString localPath
@@ -366,17 +366,19 @@ void WebApplication::configure()
     m_basePath = pref->getWebUIBasePath();
 
             //Replace base path prefix with a '/'
-        if(!m_basePath.isEmpty() && m_request.path.indexOf(m_basePath) == 0)
-            m_request.path.replace(0, m_basePath.length(), QChar('/'));
+     //   if(!m_basePath.isEmpty() && m_request.path.indexOf(m_basePath) == 0)
+     //       m_request.path.replace(0, m_basePath.length(), QChar('/'));
 
-    if(!m_basePath.isEmpty())
-    {
-        m_apiPathPattern = QRegularExpression(m_basePath + m_defaultApiPathPattern);// {QLatin1String("^/${BASEPATH}/api/v2/(?<scope>[A-Za-z_][A-Za-z_0-9]*)/(?<action>[A-Za-z_][A-Za-z_0-9]*)$")};
-    }
-    else
-    {
-        m_apiPathPattern = QRegularExpression(m_defaultApiPathPattern);
-    }
+     m_apiPathPattern = QRegularExpression(m_basePath + m_defaultApiPathPattern);
+
+   // if(!m_basePath.isEmpty())
+   // {
+   //     m_apiPathPattern = QRegularExpression(m_basePath + m_defaultApiPathPattern);// {QLatin1String("^/${BASEPATH}/api/v2/(?<scope>[A-Za-z_][A-Za-z_0-9]*)/(?<action>[A-Za-z_][A-Za-z_0-9]*)$")};
+   // }
+   // else
+   // {
+   //     m_apiPathPattern = QRegularExpression(m_defaultApiPathPattern);
+   // }
 
     m_prebuiltHeaders.clear();
     m_prebuiltHeaders.push_back({QLatin1String(Http::HEADER_X_XSS_PROTECTION), QLatin1String("1; mode=block")});

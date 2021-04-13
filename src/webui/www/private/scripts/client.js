@@ -102,7 +102,7 @@ function getSyncMainDataInterval() {
 
 const fetchQbtVersion = function() {
     new Request({
-        url: '${BASEPATH}/api/v2p/app/version',
+        url: '${BASEPATH}/api/v2/app/version',
         method: 'get',
         onSuccess: function(info) {
             if (!info) return;
@@ -542,7 +542,7 @@ window.addEvent('load', function() {
 
     let syncMainDataTimer;
     const syncMainData = function() {
-        const url = new URI('${BASEPATH}/api/v2p/sync/maindata');
+        const url = new URI('${BASEPATH}/api/v2/sync/maindata');
         url.setData('rid', syncMainDataLastResponseId);
         const request = new Request.JSON({
             url: url,
@@ -804,7 +804,7 @@ window.addEvent('load', function() {
         updateAltSpeedIcon(!alternativeSpeedLimits);
 
         new Request({
-            url: '${BASEPATH}/api/v2p/transfer/toggleSpeedLimitsMode',
+            url: '${BASEPATH}/api/v2/transfer/toggleSpeedLimitsMode',
             method: 'post',
             onComplete: function() {
                 alternativeSpeedLimits = !alternativeSpeedLimits;

@@ -29,7 +29,7 @@
                 const limit = $("dllimitUpdatevalue").value.toInt() * 1024;
                 if (hashes[0] == "global") {
                     new Request({
-                        url: '${BASEPATH}/api/v2p/transfer/setDownloadLimit',
+                        url: '${BASEPATH}/api/v2/transfer/setDownloadLimit',
                         method: 'post',
                         data: {
                             'limit': limit
@@ -42,7 +42,7 @@
                 }
                 else {
                     new Request({
-                        url: '${BASEPATH}/api/v2p/torrents/setDownloadLimit',
+                        url: '${BASEPATH}/api/v2/torrents/setDownloadLimit',
                         method: 'post',
                         data: {
                             'hashes': hashes.join('|'),
