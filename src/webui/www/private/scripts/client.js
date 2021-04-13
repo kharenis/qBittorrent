@@ -255,7 +255,7 @@ window.addEvent('load', function() {
             left: 0
         },
         loadMethod: 'xhr',
-        contentURL: '{BASEPATH}/views/filters.html',
+        contentURL: '${BASEPATH}/views/filters.html',
         onContentLoaded: function() {
             setFilter(selected_filter);
         },
@@ -981,7 +981,7 @@ window.addEvent('load', function() {
                 left: 0
             },
             loadMethod: 'xhr',
-            contentURL: '{BASEPATH}/views/search.html',
+            contentURL: '${BASEPATH}/views/search.html',
             content: '',
             column: 'searchTabColumn',
             height: null
@@ -1000,7 +1000,7 @@ window.addEvent('load', function() {
                 left: 0
             },
             loadMethod: 'xhr',
-            contentURL: '{BASEPATH}/views/rss.html',
+            contentURL: '${BASEPATH}/views/rss.html',
             content: '',
             column: 'rssTabColumn',
             height: null
@@ -1018,7 +1018,7 @@ window.addEvent('load', function() {
             left: 0
         },
         loadMethod: 'xhr',
-        contentURL: '{BASEPATH}/views/transferlist.html',
+        contentURL: '${BASEPATH}/views/transferlist.html',
         onContentLoaded: function() {
             handleDownloadParam();
             updateMainData();
@@ -1042,12 +1042,12 @@ window.addEvent('load', function() {
             bottom: 0,
             left: 0
         },
-        contentURL: '{BASEPATH}/views/properties.html',
+        contentURL: '${BASEPATH}/views/properties.html',
         require: {
             css: ['css/Tabs.css', 'css/dynamicTable.css'],
             js: ['scripts/prop-general.js', 'scripts/prop-trackers.js', 'scripts/prop-peers.js', 'scripts/prop-webseeds.js', 'scripts/prop-files.js'],
         },
-        tabsURL: '{BASEPATH}/views/propertiesToolbar.html',
+        tabsURL: '${BASEPATH}/views/propertiesToolbar.html',
         tabsOnload: function() {
             MochaUI.initializeTabs('propertiesTabs');
 

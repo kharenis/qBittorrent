@@ -168,7 +168,7 @@ QString Private::NoConvertConverter::toPortablePath(const QString &path) const
 }
 
 Private::Converter::Converter(const QString &basePath)
-    : m_baseDir {basePath}
+    : m_baseDir ${BASEPATH}
 {
     m_baseDir.makeAbsolute();
 }
