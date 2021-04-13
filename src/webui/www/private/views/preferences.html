@@ -707,6 +707,10 @@
             </tr>
         </table>
         <div class="formRow">
+            <label for="webui_basePath_value">QBT_TR(Base path:)QBT_TR[CONTEXT=OptionsDialog]</label>
+            <input type="text" id="webui_basepath_text" style="width: 4em;" />
+        </div>
+        <div class="formRow">
             <input type="checkbox" id="webui_upnp_checkbox" />
             <label for="webui_upnp_checkbox">QBT_TR(Use UPnP / NAT-PMP to forward the port from my router)QBT_TR[CONTEXT=OptionsDialog]</label>
         </div>
@@ -1835,6 +1839,7 @@
                         $('webui_address_value').setProperty('value', pref.web_ui_address);
                         $('webui_port_value').setProperty('value', pref.web_ui_port);
                         $('webui_upnp_checkbox').setProperty('checked', pref.web_ui_upnp);
+                        $('webui_basepath_text').setProperty('value', pref.web_ui_base_path);
                         $('use_https_checkbox').setProperty('checked', pref.use_https);
                         $('ssl_cert_text').setProperty('value', pref.web_ui_https_cert_path);
                         $('ssl_key_text').setProperty('value', pref.web_ui_https_key_path);
@@ -2213,6 +2218,7 @@
             settings.set('use_https', $('use_https_checkbox').getProperty('checked'));
             settings.set('web_ui_https_cert_path', $('ssl_cert_text').getProperty('value'));
             settings.set('web_ui_https_key_path', $('ssl_key_text').getProperty('value'));
+            settings.set('web_ui_base_path', $('webui_basepath_text').getProperty('value'));
 
             // Authentication
             const web_ui_username = $('webui_username_text').getProperty('value');
