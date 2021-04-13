@@ -238,6 +238,7 @@ void WebApplication::translateDocument(QString &data) const
 
         data.replace(QLatin1String("${LANG}"), m_currentLocale.left(2));
         data.replace(QLatin1String("${CACHEID}"), m_cacheID);
+        data.replace(QLatin1String("${BASEPATH}"), m_basePath);
     }
 }
 
@@ -368,7 +369,14 @@ void WebApplication::configure()
         if(!m_basePath.isEmpty() && m_request.path.indexOf(m_basePath) == 0)
             m_request.path.replace(0, m_basePath.length(), QChar('/'));
 
-    m_apiPathPattern = m_basePath + m_defaultApiPathPattern;// {QLatin1String("^/api/v2/(?<scope>[A-Za-z_][A-Za-z_0-9]*)/(?<action>[A-Za-z_][A-Za-z_0-9]*)$")};
+    if(!m_basePath.isEmpty())
+    {
+        m_apiPathPattern = QRegularExpression(m_basePath + m_defaultApiPathPattern);// {QLatin1String("^/${BASEPATH}/api/v2p/(?<scope>[A-Za-z_][A-Za-z_0-9]*)/(?<action>[A-Za-z_][A-Za-z_0-9]*)$")};
+    }
+    else
+    {
+        m_apiPathPattern = QRegularExpression(m_defaultApiPathPattern);
+    }
 
     m_prebuiltHeaders.clear();
     m_prebuiltHeaders.push_back({QLatin1String(Http::HEADER_X_XSS_PROTECTION), QLatin1String("1; mode=block")});

@@ -6589,7 +6589,7 @@ Those plugins were disabled.</source>
     </message>
 </context>
 <context>
-    <name>PreviewSelectDialog</name>
+    <name>PreviewselectDialog</name>
     <message>
         <location filename="../gui/previewselectdialog.cpp" line="59"/>
         <source>The following files from torrent &quot;%1&quot; support previewing, please select one of them:</source>

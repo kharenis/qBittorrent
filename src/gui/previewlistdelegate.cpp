@@ -49,11 +49,11 @@ void PreviewListDelegate::paint(QPainter *painter, const QStyleOptionViewItem &o
 
     switch (index.column())
     {
-    case PreviewSelectDialog::SIZE:
+    case PreviewselectDialog::SIZE:
         QItemDelegate::drawDisplay(painter, opt, option.rect, Utils::Misc::friendlyUnit(index.data().toLongLong()));
         break;
 
-    case PreviewSelectDialog::PROGRESS:
+    case PreviewselectDialog::PROGRESS:
         {
             const qreal progress = (index.data().toReal() * 100);
             const QString text = (progress >= 100)

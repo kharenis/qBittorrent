@@ -290,9 +290,9 @@ void TransferListWidget::torrentDoubleClicked()
     case PREVIEW_FILE:
         if (torrentContainsPreviewableFiles(torrent))
         {
-            auto *dialog = new PreviewSelectDialog(this, torrent);
+            auto *dialog = new PreviewselectDialog(this, torrent);
             dialog->setAttribute(Qt::WA_DeleteOnClose);
-            connect(dialog, &PreviewSelectDialog::readyToPreviewFile, this, &TransferListWidget::previewFile);
+            connect(dialog, &PreviewselectDialog::readyToPreviewFile, this, &TransferListWidget::previewFile);
             dialog->show();
         }
         else
@@ -531,15 +531,15 @@ void TransferListWidget::openSelectedTorrentsFolder() const
 #endif // Q_OS_MACOS
 }
 
-void TransferListWidget::previewSelectedTorrents()
+void TransferListWidget::previewselectedTorrents()
 {
     for (const BitTorrent::Torrent *torrent : asConst(getSelectedTorrents()))
     {
         if (torrentContainsPreviewableFiles(torrent))
         {
-            auto *dialog = new PreviewSelectDialog(this, torrent);
+            auto *dialog = new PreviewselectDialog(this, torrent);
             dialog->setAttribute(Qt::WA_DeleteOnClose);
-            connect(dialog, &PreviewSelectDialog::readyToPreviewFile, this, &TransferListWidget::previewFile);
+            connect(dialog, &PreviewselectDialog::readyToPreviewFile, this, &TransferListWidget::previewFile);
             dialog->show();
         }
         else
@@ -806,7 +806,7 @@ void TransferListWidget::displayListMenu(const QPoint &)
     auto *actionDelete = new QAction(UIThemeManager::instance()->getIcon("list-remove"), tr("Delete", "Delete the torrent"), listMenu);
     connect(actionDelete, &QAction::triggered, this, &TransferListWidget::softDeleteSelectedTorrents);
     auto *actionPreviewFile = new QAction(UIThemeManager::instance()->getIcon("view-preview"), tr("Preview file..."), listMenu);
-    connect(actionPreviewFile, &QAction::triggered, this, &TransferListWidget::previewSelectedTorrents);
+    connect(actionPreviewFile, &QAction::triggered, this, &TransferListWidget::previewselectedTorrents);
     auto *actionTorrentOptions = new QAction(UIThemeManager::instance()->getIcon("configure"), tr("Torrent options..."), listMenu);
     connect(actionTorrentOptions, &QAction::triggered, this, &TransferListWidget::setTorrentOptions);
     auto *actionOpenDestinationFolder = new QAction(UIThemeManager::instance()->getIcon("inode-directory"), tr("Open destination folder"), listMenu);

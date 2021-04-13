@@ -34,7 +34,7 @@ MochaUI.extend({
             // Get global upload limit
             let maximum = 500;
             new Request({
-                url: 'api/v2/transfer/uploadLimit',
+                url: '${BASEPATH}/api/v2p/transfer/uploadLimit',
                 method: 'post',
                 data: {},
                 onSuccess: function(data) {
@@ -83,7 +83,7 @@ MochaUI.extend({
                     }
                     else {
                         new Request.JSON({
-                            url: 'api/v2/torrents/uploadLimit',
+                            url: '${BASEPATH}/api/v2p/torrents/uploadLimit',
                             noCache: true,
                             method: 'post',
                             data: {
@@ -136,7 +136,7 @@ MochaUI.extend({
             // Get global upload limit
             let maximum = 500;
             new Request({
-                url: 'api/v2/transfer/downloadLimit',
+                url: '${BASEPATH}/api/v2p/transfer/downloadLimit',
                 method: 'post',
                 data: {},
                 onSuccess: function(data) {
@@ -185,7 +185,7 @@ MochaUI.extend({
                     }
                     else {
                         new Request.JSON({
-                            url: 'api/v2/torrents/downloadLimit',
+                            url: '${BASEPATH}/api/v2p/torrents/downloadLimit',
                             noCache: true,
                             method: 'post',
                             data: {

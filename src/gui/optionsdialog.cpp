@@ -240,7 +240,7 @@ OptionsDialog::OptionsDialog(QWidget *parent)
     m_ui->scanFoldersView->setModel(ScanFoldersModel::instance());
     m_ui->scanFoldersView->setItemDelegate(new ScanFoldersDelegate(this, m_ui->scanFoldersView));
     connect(ScanFoldersModel::instance(), &QAbstractListModel::dataChanged, this, &ThisType::enableApplyButton);
-    connect(m_ui->scanFoldersView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &ThisType::handleScanFolderViewSelectionChanged);
+    connect(m_ui->scanFoldersView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &ThisType::handleScanFolderviewselectionChanged);
 
     // Languages supported
     initializeLanguageCombo();
@@ -1699,7 +1699,7 @@ void OptionsDialog::on_removeScanFolderButton_clicked()
     ScanFoldersModel::instance()->removePath(selected.first().row(), false);
 }
 
-void OptionsDialog::handleScanFolderViewSelectionChanged()
+void OptionsDialog::handleScanFolderviewselectionChanged()
 {
     m_ui->removeScanFolderButton->setEnabled(!m_ui->scanFoldersView->selectionModel()->selectedIndexes().isEmpty());
 }

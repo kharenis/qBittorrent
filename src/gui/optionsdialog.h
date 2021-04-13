@@ -99,7 +99,7 @@ private slots:
     void toggleComboRatioLimitAct();
     void changePage(QListWidgetItem *, QListWidgetItem *);
     void loadSplitterState();
-    void handleScanFolderViewSelectionChanged();
+    void handleScanFolderviewselectionChanged();
     void on_IpFilterRefreshBtn_clicked();
     void handleIPFilterParsed(bool error, int ruleCount);
     void on_banListButton_clicked();

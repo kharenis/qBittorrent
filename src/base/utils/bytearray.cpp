@@ -31,7 +31,7 @@
 #include <QByteArray>
 #include <QVector>
 
-QVector<QByteArray> Utils::ByteArray::splitToViews(const QByteArray &in, const QByteArray &sep, const QString::SplitBehavior behavior)
+QVector<QByteArray> Utils::ByteArray::splitToviews(const QByteArray &in, const QByteArray &sep, const QString::SplitBehavior behavior)
 {
     if (sep.isEmpty())
         return {in};

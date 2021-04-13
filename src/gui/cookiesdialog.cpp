@@ -40,7 +40,7 @@
 
 #define SETTINGS_KEY(name) QStringLiteral("CookiesDialog/" name)
 const QString KEY_SIZE = SETTINGS_KEY("Size");
-const QString KEY_COOKIESVIEWSTATE = SETTINGS_KEY("CookiesViewState");
+const QString KEY_COOKIESviewsTATE = SETTINGS_KEY("Cookiesviewstate");
 
 CookiesDialog::CookiesDialog(QWidget *parent)
     : QDialog(parent)
@@ -63,14 +63,14 @@ CookiesDialog::CookiesDialog(QWidget *parent)
 
     Utils::Gui::resize(this, SettingsStorage::instance()->loadValue<QSize>(KEY_SIZE));
     m_ui->treeView->header()->restoreState(
-        SettingsStorage::instance()->loadValue<QByteArray>(KEY_COOKIESVIEWSTATE));
+        SettingsStorage::instance()->loadValue<QByteArray>(KEY_COOKIESviewsTATE));
 }
 
 CookiesDialog::~CookiesDialog()
 {
     SettingsStorage::instance()->storeValue(KEY_SIZE, size());
     SettingsStorage::instance()->storeValue(
-                KEY_COOKIESVIEWSTATE, m_ui->treeView->header()->saveState());
+                KEY_COOKIESviewsTATE, m_ui->treeView->header()->saveState());
     delete m_ui;
 }
 
