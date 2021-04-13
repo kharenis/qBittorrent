@@ -364,6 +364,12 @@ void WebApplication::configure()
     m_isHttpsEnabled = pref->isWebUiHttpsEnabled();
     m_basePath = pref->getWebUIBasePath();
 
+            //Replace base path prefix with a '/'
+        if(!m_basePath.isEmpty() && m_request.path.indexOf(m_basePath) == 0)
+            m_request.path.replace(0, m_basePath.length(), QChar('/'));
+
+    m_apiPathPattern = m_basePath + m_defaultApiPathPattern;// {QLatin1String("^/api/v2/(?<scope>[A-Za-z_][A-Za-z_0-9]*)/(?<action>[A-Za-z_][A-Za-z_0-9]*)$")};
+
     m_prebuiltHeaders.clear();
     m_prebuiltHeaders.push_back({QLatin1String(Http::HEADER_X_XSS_PROTECTION), QLatin1String("1; mode=block")});
     m_prebuiltHeaders.push_back({QLatin1String(Http::HEADER_X_CONTENT_TYPE_OPTIONS), QLatin1String("nosniff")});
@@ -496,11 +502,6 @@ Http::Response WebApplication::processRequest(const Http::Request &request, cons
         }
 
         sessionInitialize();
-
-        //Replace base path prefix with a '/'
-        if(!m_basePath.isEmpty() && m_request.path.indexOf(m_basePath) == 0)
-            m_request.path.replace(0, m_basePath.length(), QChar('/'));
-
         doProcessRequest();
     }
     catch (const HTTPError &error)
