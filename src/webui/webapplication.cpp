@@ -158,9 +158,9 @@ void WebApplication::sendWebUIFile()
 
     const QString path
     {
-        (request().path != QLatin1String("/")
+        (request().path != QString("/")
                 ? request().path
-                : QLatin1String(m_basePath + "/index.html"))
+                : QString(m_basePath + "/index.html"))
     };
 
     QString localPath
