@@ -849,7 +849,7 @@ void OptionsDialog::saveOptions()
         pref->setWebUIMaxAuthFailCount(m_ui->spinBanCounter->value());
         pref->setWebUIBanDuration(std::chrono::seconds {m_ui->spinBanDuration->value()});
         pref->setWebUISessionTimeout(m_ui->spinSessionTimeout->value());
-        pref->setWebUIBasePath(m_ui->textWebUIBasePath->value());
+        pref->setWebUIBasePath(m_ui->textWebUIBasePath->text());
         // Authentication
         pref->setWebUiUsername(webUiUsername());
         if (!webUiPassword().isEmpty())
@@ -1257,7 +1257,7 @@ void OptionsDialog::loadOptions()
     m_ui->spinBanCounter->setValue(pref->getWebUIMaxAuthFailCount());
     m_ui->spinBanDuration->setValue(pref->getWebUIBanDuration().count());
     m_ui->spinSessionTimeout->setValue(pref->getWebUISessionTimeout());
-    m_ui->setWebUIBasePath->setValue(pref->getWebUIBasePath());
+    m_ui->textWebUIBasePath->setValue(pref->getWebUIBasePath());
 
     // Security
     m_ui->checkClickjacking->setChecked(pref->isWebUiClickjackingProtectionEnabled());
