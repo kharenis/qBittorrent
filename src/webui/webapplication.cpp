@@ -498,7 +498,7 @@ Http::Response WebApplication::processRequest(const Http::Request &request, cons
         sessionInitialize();
 
         //Replace base path prefix with a '/'
-        if(!m_basePath.isEmpty() && m_request.path.indexOf(m_basePath == 0))
+        if(!m_basePath.isEmpty() && m_request.path.indexOf(m_basePath) == 0)
             m_request.path.replace(0, m_basePath.length(), QChar('/'));
 
         doProcessRequest();
