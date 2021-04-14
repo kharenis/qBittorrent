@@ -247,7 +247,7 @@ void WebApplication::translateDocument(QString &data) const
                 ? m_basePath.mid(1)
                 : m_basePath;
     
-            data.replace(QRegularExpression("[^/]api/"), "/"  basePath + "/api/");
+            data.replace(QRegularExpression("[^/]api/"), "/" + basePath + "/api/");
             data.replace(QRegularExpression("[^/]css/"), "/" + basePath + "/css/");
             data.replace(QRegularExpression("[^/]images/"), "/" + basePath + "/images/");
             data.replace(QRegularExpression("[^/]scripts/"), "/" + basePath + "/scripts/");
