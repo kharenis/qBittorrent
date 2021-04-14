@@ -6580,37 +6580,37 @@ Those plugins were disabled.</source>
 <context>
     <name>PreviewSelectDialog</name>
     <message>
-        <location filename="../gui/PreviewSelectDialog.cpp" line="59"/>
+        <location filename="../gui/previewselectdialog.cpp" line="59"/>
         <source>The following files from torrent &quot;%1&quot; support previewing, please select one of them:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.cpp" line="62"/>
+        <location filename="../gui/previewselectdialog.cpp" line="62"/>
         <source>Preview</source>
         <translation>Перадпрагляд</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.cpp" line="70"/>
+        <location filename="../gui/previewselectdialog.cpp" line="70"/>
         <source>Name</source>
         <translation>Назва</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.cpp" line="71"/>
+        <location filename="../gui/previewselectdialog.cpp" line="71"/>
         <source>Size</source>
         <translation>Памер</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.cpp" line="72"/>
+        <location filename="../gui/previewselectdialog.cpp" line="72"/>
         <source>Progress</source>
         <translation>Ход выканання</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.cpp" line="136"/>
+        <location filename="../gui/previewselectdialog.cpp" line="136"/>
         <source>Preview impossible</source>
         <translation>Перадпрагляд немагчымы</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.cpp" line="137"/>
+        <location filename="../gui/previewselectdialog.cpp" line="137"/>
         <source>Sorry, we can&apos;t preview this file: &quot;%1&quot;.</source>
         <translation type="unfinished"></translation>
     </message>
