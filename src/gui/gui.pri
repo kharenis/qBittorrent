@@ -26,7 +26,7 @@ HEADERS += \
     $$PWD/optionsdialog.h \
     $$PWD/powermanagement/powermanagement.h \
     $$PWD/previewlistdelegate.h \
-    $$PWD/previewselectdialog.h \
+    $$PWD/PreviewSelectdialog.h \
     $$PWD/progressbarpainter.h \
     $$PWD/properties/downloadedpiecesbar.h \
     $$PWD/properties/peerlistsortmodel.h \
@@ -106,7 +106,7 @@ SOURCES += \
     $$PWD/optionsdialog.cpp \
     $$PWD/powermanagement/powermanagement.cpp \
     $$PWD/previewlistdelegate.cpp \
-    $$PWD/previewselectdialog.cpp \
+    $$PWD/PreviewSelectdialog.cpp \
     $$PWD/progressbarpainter.cpp \
     $$PWD/properties/downloadedpiecesbar.cpp \
     $$PWD/properties/peerlistsortmodel.cpp \
@@ -192,7 +192,7 @@ FORMS += \
     $$PWD/ipsubnetwhitelistoptionsdialog.ui \
     $$PWD/mainwindow.ui \
     $$PWD/optionsdialog.ui \
-    $$PWD/previewselectdialog.ui \
+    $$PWD/PreviewSelectdialog.ui \
     $$PWD/properties/peersadditiondialog.ui \
     $$PWD/properties/propertieswidget.ui \
     $$PWD/properties/trackersadditiondialog.ui \

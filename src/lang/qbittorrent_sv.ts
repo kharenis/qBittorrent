@@ -6588,44 +6588,44 @@ Dessa insticksmoduler inaktiverades.</translation>
     </message>
 </context>
 <context>
-    <name>PreviewselectDialog</name>
+    <name>PreviewSelectDialog</name>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="59"/>
+        <location filename="../gui/PreviewSelectdialog.cpp" line="59"/>
         <source>The following files from torrent &quot;%1&quot; support previewing, please select one of them:</source>
         <translation>Följande filer från torrenten &quot;%1&quot; stöder granskning, vänligen välj en av dem:</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="62"/>
+        <location filename="../gui/PreviewSelectdialog.cpp" line="62"/>
         <source>Preview</source>
         <translation>Förhandsvisning</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="70"/>
+        <location filename="../gui/PreviewSelectdialog.cpp" line="70"/>
         <source>Name</source>
         <translation>Namn</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="71"/>
+        <location filename="../gui/PreviewSelectdialog.cpp" line="71"/>
         <source>Size</source>
         <translation>Storlek</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="72"/>
+        <location filename="../gui/PreviewSelectdialog.cpp" line="72"/>
         <source>Progress</source>
         <translation>Förlopp</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="136"/>
+        <location filename="../gui/PreviewSelectdialog.cpp" line="136"/>
         <source>Preview impossible</source>
         <translation>Förhandsgranskning omöjlig</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="137"/>
+        <location filename="../gui/PreviewSelectdialog.cpp" line="137"/>
         <source>Sorry, we can&apos;t preview this file: &quot;%1&quot;.</source>
         <translation>Tyvärr kan vi inte förhandsgranska den här filen: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.ui" line="14"/>
+        <location filename="../gui/PreviewSelectdialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation>Förhandsvisa val</translation>
     </message>

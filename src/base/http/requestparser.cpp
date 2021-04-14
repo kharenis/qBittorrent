@@ -209,7 +209,7 @@ bool RequestParser::parseRequestLine(const QString &line)
 
         // [rfc3986] 2.4 When to Encode or Decode
         // URL components should be separated before percent-decoding
-        for (const QByteArray &param : asConst(splitToviews(query, "&")))
+        for (const QByteArray &param : asConst(splitToViews(query, "&")))
         {
             const int eqCharPos = param.indexOf('=');
             if (eqCharPos <= 0) continue;  // ignores params without name
@@ -276,7 +276,7 @@ bool RequestParser::parsePostMessage(const QByteArray &data)
 
         // split data by "dash-boundary"
         const QByteArray dashDelimiter = QByteArray("--") + delimiter + CRLF;
-        QVector<QByteArray> multipart = splitToviews(data, dashDelimiter, QString::SkipEmptyParts);
+        QVector<QByteArray> multipart = splitToViews(data, dashDelimiter, QString::SkipEmptyParts);
         if (multipart.isEmpty())
         {
             qWarning() << Q_FUNC_INFO << "multipart empty";
@@ -299,7 +299,7 @@ bool RequestParser::parsePostMessage(const QByteArray &data)
 
 bool RequestParser::parseFormData(const QByteArray &data)
 {
-    const QVector<QByteArray> list = splitToviews(data, EOH, QString::KeepEmptyParts);
+    const QVector<QByteArray> list = splitToViews(data, EOH, QString::KeepEmptyParts);
 
     if (list.size() != 2)
     {
