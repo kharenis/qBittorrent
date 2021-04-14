@@ -25,7 +25,7 @@ add_library(qbt_gui STATIC
     optionsdialog.h
     powermanagement/powermanagement.h
     previewlistdelegate.h
-    PreviewSelectdialog.h
+    previewselectdialog.h
     progressbarpainter.h
     properties/downloadedpiecesbar.h
     properties/peerlistsortmodel.h
@@ -105,7 +105,7 @@ add_library(qbt_gui STATIC
     optionsdialog.cpp
     powermanagement/powermanagement.cpp
     previewlistdelegate.cpp
-    PreviewSelectdialog.cpp
+    previewselectdialog.cpp
     progressbarpainter.cpp
     properties/downloadedpiecesbar.cpp
     properties/peerlistsortmodel.cpp
@@ -171,7 +171,7 @@ add_library(qbt_gui STATIC
     ipsubnetwhitelistoptionsdialog.ui
     mainwindow.ui
     optionsdialog.ui
-    PreviewSelectdialog.ui
+    previewselectdialog.ui
     properties/peersadditiondialog.ui
     properties/propertieswidget.ui
     properties/trackersadditiondialog.ui

@@ -60,7 +60,7 @@
 #include "deletionconfirmationdialog.h"
 #include "mainwindow.h"
 #include "optionsdialog.h"
-#include "PreviewSelectdialog.h"
+#include "previewselectdialog.h"
 #include "speedlimitdialog.h"
 #include "torrentcategorydialog.h"
 #include "torrentoptionsdialog.h"
@@ -290,9 +290,9 @@ void TransferListWidget::torrentDoubleClicked()
     case PREVIEW_FILE:
         if (torrentContainsPreviewableFiles(torrent))
         {
-            auto *dialog = new PreviewSelectDialog(this, torrent);
+            auto *dialog = new previewselectdialog(this, torrent);
             dialog->setAttribute(Qt::WA_DeleteOnClose);
-            connect(dialog, &PreviewSelectDialog::readyToPreviewFile, this, &TransferListWidget::previewFile);
+            connect(dialog, &previewselectdialog::readyToPreviewFile, this, &TransferListWidget::previewFile);
             dialog->show();
         }
         else
@@ -537,9 +537,9 @@ void TransferListWidget::PreviewSelectedTorrents()
     {
         if (torrentContainsPreviewableFiles(torrent))
         {
-            auto *dialog = new PreviewSelectDialog(this, torrent);
+            auto *dialog = new previewselectdialog(this, torrent);
             dialog->setAttribute(Qt::WA_DeleteOnClose);
-            connect(dialog, &PreviewSelectDialog::readyToPreviewFile, this, &TransferListWidget::previewFile);
+            connect(dialog, &previewselectdialog::readyToPreviewFile, this, &TransferListWidget::previewFile);
             dialog->show();
         }
         else

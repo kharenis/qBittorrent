@@ -6590,44 +6590,44 @@ Those plugins were disabled.</source>
     </message>
 </context>
 <context>
-    <name>PreviewSelectDialog</name>
+    <name>previewselectdialog</name>
     <message>
-        <location filename="../gui/PreviewSelectdialog.cpp" line="59"/>
+        <location filename="../gui/previewselectdialog.cpp" line="59"/>
         <source>The following files from torrent &quot;%1&quot; support previewing, please select one of them:</source>
         <translation>Следующие файлы торрента «%1» поддерживают предпросмотр, пожалуйста, выберите один из них:</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectdialog.cpp" line="62"/>
+        <location filename="../gui/previewselectdialog.cpp" line="62"/>
         <source>Preview</source>
         <translation>Предпросмотр</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectdialog.cpp" line="70"/>
+        <location filename="../gui/previewselectdialog.cpp" line="70"/>
         <source>Name</source>
         <translation>Имя</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectdialog.cpp" line="71"/>
+        <location filename="../gui/previewselectdialog.cpp" line="71"/>
         <source>Size</source>
         <translation>Размер</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectdialog.cpp" line="72"/>
+        <location filename="../gui/previewselectdialog.cpp" line="72"/>
         <source>Progress</source>
         <translation>Прогресс</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectdialog.cpp" line="136"/>
+        <location filename="../gui/previewselectdialog.cpp" line="136"/>
         <source>Preview impossible</source>
         <translation>Предпросмотр невозможен</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectdialog.cpp" line="137"/>
+        <location filename="../gui/previewselectdialog.cpp" line="137"/>
         <source>Sorry, we can&apos;t preview this file: &quot;%1&quot;.</source>
         <translation>Извините, предпросмотр этого файла невозможен: «%1».</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectdialog.ui" line="14"/>
+        <location filename="../gui/previewselectdialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation>Выбор предпросмотра</translation>
     </message>

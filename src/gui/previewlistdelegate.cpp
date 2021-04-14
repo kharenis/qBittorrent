@@ -33,7 +33,7 @@
 #include <QStyleOptionViewItem>
 
 #include "base/utils/misc.h"
-#include "PreviewSelectdialog.h"
+#include "previewselectdialog.h"
 
 PreviewListDelegate::PreviewListDelegate(QObject *parent)
     : QItemDelegate(parent)
@@ -49,11 +49,11 @@ void PreviewListDelegate::paint(QPainter *painter, const QStyleOptionViewItem &o
 
     switch (index.column())
     {
-    case PreviewSelectDialog::SIZE:
+    case previewselectdialog::SIZE:
         QItemDelegate::drawDisplay(painter, opt, option.rect, Utils::Misc::friendlyUnit(index.data().toLongLong()));
         break;
 
-    case PreviewSelectDialog::PROGRESS:
+    case previewselectdialog::PROGRESS:
         {
             const qreal progress = (index.data().toReal() * 100);
             const QString text = (progress >= 100)

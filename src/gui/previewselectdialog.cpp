@@ -26,7 +26,7 @@
  * exception statement from your version.
  */
 
-#include "PreviewSelectdialog.h"
+#include "previewselectdialog.h"
 
 #include <QFile>
 #include <QHeaderView>
@@ -42,14 +42,14 @@
 #include "base/utils/fs.h"
 #include "base/utils/misc.h"
 #include "previewlistdelegate.h"
-#include "ui_PreviewSelectdialog.h"
+#include "ui_previewselectdialog.h"
 #include "utils.h"
 
-#define SETTINGS_KEY(name) "PreviewSelectDialog/" name
+#define SETTINGS_KEY(name) "previewselectdialog/" name
 
-PreviewSelectDialog::PreviewSelectDialog(QWidget *parent, const BitTorrent::Torrent *torrent)
+previewselectdialog::previewselectdialog(QWidget *parent, const BitTorrent::Torrent *torrent)
     : QDialog(parent)
-    , m_ui(new Ui::PreviewSelectDialog)
+    , m_ui(new Ui::previewselectdialog)
     , m_torrent(torrent)
     , m_storeDialogSize(SETTINGS_KEY("Size"))
     , m_storeTreeHeaderState(SETTINGS_KEY("HeaderState"))
@@ -60,9 +60,9 @@ PreviewSelectDialog::PreviewSelectDialog(QWidget *parent, const BitTorrent::Torr
         .arg(m_torrent->name()));
 
     m_ui->buttonBox->button(QDialogButtonBox::Ok)->setText(tr("Preview"));
-    connect(m_ui->buttonBox, &QDialogButtonBox::accepted, this, &PreviewSelectDialog::previewButtonClicked);
+    connect(m_ui->buttonBox, &QDialogButtonBox::accepted, this, &previewselectdialog::previewButtonClicked);
     connect(m_ui->buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
-    connect(m_ui->previewList, &QAbstractItemView::doubleClicked, this, &PreviewSelectDialog::previewButtonClicked);
+    connect(m_ui->previewList, &QAbstractItemView::doubleClicked, this, &previewselectdialog::previewButtonClicked);
 
     const Preferences *pref = Preferences::instance();
     // Preview list
@@ -110,14 +110,14 @@ PreviewSelectDialog::PreviewSelectDialog(QWidget *parent, const BitTorrent::Torr
     loadWindowState();
 }
 
-PreviewSelectDialog::~PreviewSelectDialog()
+previewselectdialog::~previewselectdialog()
 {
     saveWindowState();
 
     delete m_ui;
 }
 
-void PreviewSelectDialog::previewButtonClicked()
+void previewselectdialog::previewButtonClicked()
 {
     const QModelIndexList selectedIndexes = m_ui->previewList->selectionModel()->selectedRows(FILE_INDEX);
     if (selectedIndexes.isEmpty()) return;
@@ -144,7 +144,7 @@ void PreviewSelectDialog::previewButtonClicked()
     accept();
 }
 
-void PreviewSelectDialog::saveWindowState()
+void previewselectdialog::saveWindowState()
 {
     // Persist dialog size
     m_storeDialogSize = size();
@@ -152,7 +152,7 @@ void PreviewSelectDialog::saveWindowState()
     m_storeTreeHeaderState = m_ui->previewList->header()->saveState();
 }
 
-void PreviewSelectDialog::loadWindowState()
+void previewselectdialog::loadWindowState()
 {
     // Restore dialog size
     Utils::Gui::resize(this, m_storeDialogSize);
@@ -164,7 +164,7 @@ void PreviewSelectDialog::loadWindowState()
     }
 }
 
-void PreviewSelectDialog::showEvent(QShowEvent *event)
+void previewselectdialog::showEvent(QShowEvent *event)
 {
     // event originated from system
     if (event->spontaneous())

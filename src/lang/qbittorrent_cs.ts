@@ -6587,44 +6587,44 @@ Tyto pluginy byly vypnuty.</translation>
     </message>
 </context>
 <context>
-    <name>PreviewSelectDialog</name>
+    <name>previewselectdialog</name>
     <message>
-        <location filename="../gui/PreviewSelectdialog.cpp" line="59"/>
+        <location filename="../gui/previewselectdialog.cpp" line="59"/>
         <source>The following files from torrent &quot;%1&quot; support previewing, please select one of them:</source>
         <translation>Následující soubory torrentu &quot;%1&quot; podporují náhled, vyberte prosím jeden z nich:</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectdialog.cpp" line="62"/>
+        <location filename="../gui/previewselectdialog.cpp" line="62"/>
         <source>Preview</source>
         <translation>Náhled</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectdialog.cpp" line="70"/>
+        <location filename="../gui/previewselectdialog.cpp" line="70"/>
         <source>Name</source>
         <translation>Název</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectdialog.cpp" line="71"/>
+        <location filename="../gui/previewselectdialog.cpp" line="71"/>
         <source>Size</source>
         <translation>Velikost</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectdialog.cpp" line="72"/>
+        <location filename="../gui/previewselectdialog.cpp" line="72"/>
         <source>Progress</source>
         <translation>Průběh</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectdialog.cpp" line="136"/>
+        <location filename="../gui/previewselectdialog.cpp" line="136"/>
         <source>Preview impossible</source>
         <translation>Náhled není možný</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectdialog.cpp" line="137"/>
+        <location filename="../gui/previewselectdialog.cpp" line="137"/>
         <source>Sorry, we can&apos;t preview this file: &quot;%1&quot;.</source>
         <translation>Je nám líto, nemůžeme zobrazit náhled tohoto souboru: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectdialog.ui" line="14"/>
+        <location filename="../gui/previewselectdialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation>Výběr náhledu</translation>
     </message>
