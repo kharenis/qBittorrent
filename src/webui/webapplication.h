@@ -99,6 +99,7 @@ private:
     void doProcessRequest();
     void doProcessPath();
     void configure();
+    void fireOnceConfigure();
 
     void registerAPIController(const QString &scope, APIController *controller);
     void declarePublicAPI(const QString &apiPath);

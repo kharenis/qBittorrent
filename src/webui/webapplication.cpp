@@ -130,9 +130,7 @@ WebApplication::WebApplication(QObject *parent)
 
     declarePublicAPI(QLatin1String("auth/login"));
 
-    //Preferences that require a restart
-    m_basePath = pref->getWebUIBasePath();
-
+    fireOnceConfigure();
     configure();
     connect(Preferences::instance(), &Preferences::changed, this, &WebApplication::configure);
 }
@@ -334,6 +332,13 @@ void WebApplication::doProcessRequest()
             Q_ASSERT(false);
         }
     }
+}
+
+//For configurations that require a restart to take effect
+void WebApplication:fireOnceConfigure()
+{
+    const auto *pref = Preferences::instance();
+    m_basePath = pref->getWebUIBasePath();
 }
 
 void WebApplication::configure()
