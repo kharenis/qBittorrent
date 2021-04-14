@@ -95,4 +95,4 @@ class SeeOtherHTTPError : public HTTPError
 {
 public:
     explicit SeeOtherHTTPError(const QString &message = {});
-}
+};
