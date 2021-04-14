@@ -130,6 +130,9 @@ WebApplication::WebApplication(QObject *parent)
 
     declarePublicAPI(QLatin1String("auth/login"));
 
+    //Preferences that require a restart
+    m_basePath = pref->getWebUIBasePath();
+
     configure();
     connect(Preferences::instance(), &Preferences::changed, this, &WebApplication::configure);
 }
@@ -338,10 +341,9 @@ void WebApplication::configure()
     const auto *pref = Preferences::instance();
 
     const bool isAltUIUsed = pref->isAltWebUiEnabled();
-    const QString basePath = pref->getWebUIBasePath();
     const QString rootFolder = Utils::Fs::expandPathAbs(
                 !isAltUIUsed ? WWW_FOLDER : pref->getWebUiRootFolder());
-    if ((isAltUIUsed != m_isAltUIUsed) || (rootFolder != m_rootFolder) || (basePath != m_basePath))
+    if ((isAltUIUsed != m_isAltUIUsed) || (rootFolder != m_rootFolder))
     {
         m_isAltUIUsed = isAltUIUsed;
         m_rootFolder = rootFolder;
@@ -382,7 +384,6 @@ void WebApplication::configure()
     m_isSecureCookieEnabled = pref->isWebUiSecureCookieEnabled();
     m_isHostHeaderValidationEnabled = pref->isWebUIHostHeaderValidationEnabled();
     m_isHttpsEnabled = pref->isWebUiHttpsEnabled();
-    m_basePath = pref->getWebUIBasePath();
 
     m_prebuiltHeaders.clear();
     m_prebuiltHeaders.push_back({QLatin1String(Http::HEADER_X_XSS_PROTECTION), QLatin1String("1; mode=block")});
