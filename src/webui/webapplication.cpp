@@ -160,7 +160,7 @@ void WebApplication::sendWebUIFile()
     {
         (request().path != QString("/")
                 ? request().path
-                : QString(m_basePath + "/index.html"))
+                : QString("/index.html"))
     };
 
     QString localPath
