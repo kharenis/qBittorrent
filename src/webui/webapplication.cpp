@@ -499,7 +499,7 @@ Http::Response WebApplication::processRequest(const Http::Request &request, cons
         sessionInitialize();
 
         if(!m_basePath.isEmpty() && m_request.path.indexOf(m_basePath) == 0)
-            m_request.path.replace(0, m_basePath.length(), QChar('/'));
+            m_request.path.replace(0, m_basePath.length(), QChar(''));
 
         doProcessRequest();
     }
