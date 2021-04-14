@@ -501,6 +501,9 @@ Http::Response WebApplication::processRequest(const Http::Request &request, cons
         if(!m_basePath.isEmpty() && m_request.path.indexOf(m_basePath) == 0)
             m_request.path.remove(0, m_basePath.length());
 
+        if(m_request.path.isEmpty())
+            m_request.path = "/";
+
         doProcessRequest();
     }
     catch (const HTTPError &error)
