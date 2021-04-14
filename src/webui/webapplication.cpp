@@ -269,15 +269,13 @@ void WebApplication::doProcessPath()
         {
             //Set location header for redirect
             setHeader({Http::HEADER_LOCATION, m_basePath + m_request.path});
+
+            //Clear cached files as they'll need a new BASEPATH
+            m_translatedFiles.clear();
+
             throw SeeOtherHTTPError(m_basePath + m_request.path);
         }
     }
-
-    //if(!m_basePath.isEmpty() && m_request.path.indexOf(m_basePath) == 0)
-    //    m_request.path.remove(0, m_basePath.length());
-    //
-    //if(m_request.path.isEmpty())
-    //    m_request.path = "/";
 }
 
 void WebApplication::doProcessRequest()
