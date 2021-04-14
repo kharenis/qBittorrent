@@ -335,7 +335,7 @@ void WebApplication::doProcessRequest()
 }
 
 //For configurations that require a restart to take effect
-void WebApplication:fireOnceConfigure()
+void WebApplication::fireOnceConfigure()
 {
     const auto *pref = Preferences::instance();
     m_basePath = pref->getWebUIBasePath();
