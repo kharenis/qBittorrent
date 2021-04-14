@@ -6590,44 +6590,44 @@ De uavinstallerbare programtilleggene ble avskrudd.</translation>
     </message>
 </context>
 <context>
-    <name>previewselectdialog</name>
+    <name>PreviewSelectDialog</name>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="59"/>
+        <location filename="../gui/PreviewSelectDialog.cpp" line="59"/>
         <source>The following files from torrent &quot;%1&quot; support previewing, please select one of them:</source>
         <translation>De følgende filene fra torrent «%1» støtter forhåndsvisning. Velg en av dem:</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="62"/>
+        <location filename="../gui/PreviewSelectDialog.cpp" line="62"/>
         <source>Preview</source>
         <translation>Forhåndsvis</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="70"/>
+        <location filename="../gui/PreviewSelectDialog.cpp" line="70"/>
         <source>Name</source>
         <translation>Navn</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="71"/>
+        <location filename="../gui/PreviewSelectDialog.cpp" line="71"/>
         <source>Size</source>
         <translation>Størrelse</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="72"/>
+        <location filename="../gui/PreviewSelectDialog.cpp" line="72"/>
         <source>Progress</source>
         <translation>Fremdrift</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="136"/>
+        <location filename="../gui/PreviewSelectDialog.cpp" line="136"/>
         <source>Preview impossible</source>
         <translation>Forhåndsvisning er ikke mulig</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="137"/>
+        <location filename="../gui/PreviewSelectDialog.cpp" line="137"/>
         <source>Sorry, we can&apos;t preview this file: &quot;%1&quot;.</source>
         <translation>Denne fila kan ikke forhåndsvises: «%1».</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.ui" line="14"/>
+        <location filename="../gui/PreviewSelectDialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation>Forhåndsvis utvalg</translation>
     </message>

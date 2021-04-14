@@ -40,14 +40,14 @@ namespace BitTorrent
 }
 namespace Ui
 {
-    class previewselectdialog;
+    class PreviewSelectDialog;
 }
 class PreviewListDelegate;
 
-class previewselectdialog final : public QDialog
+class PreviewSelectDialog final : public QDialog
 {
     Q_OBJECT
-    Q_DISABLE_COPY(previewselectdialog)
+    Q_DISABLE_COPY(PreviewSelectDialog)
 
 public:
     enum PreviewColumn
@@ -60,8 +60,8 @@ public:
         NB_COLUMNS
     };
 
-    previewselectdialog(QWidget *parent, const BitTorrent::Torrent *torrent);
-    ~previewselectdialog();
+    PreviewSelectDialog(QWidget *parent, const BitTorrent::Torrent *torrent);
+    ~PreviewSelectDialog();
 
 signals:
     void readyToPreviewFile(QString) const;
@@ -75,7 +75,7 @@ private:
     void loadWindowState();
     void saveWindowState();
 
-    Ui::previewselectdialog *m_ui;
+    Ui::PreviewSelectDialog *m_ui;
     QStandardItemModel *m_previewListModel;
     PreviewListDelegate *m_listDelegate;
     const BitTorrent::Torrent *m_torrent;

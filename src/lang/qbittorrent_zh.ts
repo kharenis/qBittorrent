@@ -6589,44 +6589,44 @@ Those plugins were disabled.</source>
     </message>
 </context>
 <context>
-    <name>previewselectdialog</name>
+    <name>PreviewSelectDialog</name>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="59"/>
+        <location filename="../gui/PreviewSelectDialog.cpp" line="59"/>
         <source>The following files from torrent &quot;%1&quot; support previewing, please select one of them:</source>
         <translation>下列来自 torrent &quot;%1&quot; 的文件支持预览，请选择其中之一：</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="62"/>
+        <location filename="../gui/PreviewSelectDialog.cpp" line="62"/>
         <source>Preview</source>
         <translation>预览</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="70"/>
+        <location filename="../gui/PreviewSelectDialog.cpp" line="70"/>
         <source>Name</source>
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="71"/>
+        <location filename="../gui/PreviewSelectDialog.cpp" line="71"/>
         <source>Size</source>
         <translation>大小</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="72"/>
+        <location filename="../gui/PreviewSelectDialog.cpp" line="72"/>
         <source>Progress</source>
         <translation>进度</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="136"/>
+        <location filename="../gui/PreviewSelectDialog.cpp" line="136"/>
         <source>Preview impossible</source>
         <translation>无法预览</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="137"/>
+        <location filename="../gui/PreviewSelectDialog.cpp" line="137"/>
         <source>Sorry, we can&apos;t preview this file: &quot;%1&quot;.</source>
         <translation>抱歉，此文件无法预览：&quot;%1&quot;。</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.ui" line="14"/>
+        <location filename="../gui/PreviewSelectDialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation>选择要预览的文件</translation>
     </message>

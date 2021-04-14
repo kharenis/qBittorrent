@@ -6593,44 +6593,44 @@ Those plugins were disabled.</source>
     </message>
 </context>
 <context>
-    <name>previewselectdialog</name>
+    <name>PreviewSelectDialog</name>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="59"/>
+        <location filename="../gui/PreviewSelectDialog.cpp" line="59"/>
         <source>The following files from torrent &quot;%1&quot; support previewing, please select one of them:</source>
         <translation>Los siguientes ficheros del torrent &quot;%1&quot; soportan vista previa, por favor seleccione uno de ellos:</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="62"/>
+        <location filename="../gui/PreviewSelectDialog.cpp" line="62"/>
         <source>Preview</source>
         <translation>Previsualizar</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="70"/>
+        <location filename="../gui/PreviewSelectDialog.cpp" line="70"/>
         <source>Name</source>
         <translation>Nombre</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="71"/>
+        <location filename="../gui/PreviewSelectDialog.cpp" line="71"/>
         <source>Size</source>
         <translation>Tamaño</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="72"/>
+        <location filename="../gui/PreviewSelectDialog.cpp" line="72"/>
         <source>Progress</source>
         <translation>Progreso</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="136"/>
+        <location filename="../gui/PreviewSelectDialog.cpp" line="136"/>
         <source>Preview impossible</source>
         <translation>Imposible previsualizar</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.cpp" line="137"/>
+        <location filename="../gui/PreviewSelectDialog.cpp" line="137"/>
         <source>Sorry, we can&apos;t preview this file: &quot;%1&quot;.</source>
         <translation>Lo siento, no se puede previsualizar este archivo: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../gui/previewselectdialog.ui" line="14"/>
+        <location filename="../gui/PreviewSelectDialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation>Previsualizar la selección</translation>
     </message>
