@@ -6626,7 +6626,7 @@ Those plugins were disabled.</source>
         <translation>抱歉，此文件无法预览：&quot;%1&quot;。</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.ui" line="14"/>
+        <location filename="../gui/previewselectdialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation>选择要预览的文件</translation>
     </message>

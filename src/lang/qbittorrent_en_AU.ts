@@ -6965,7 +6965,7 @@ Those plugins were disabled.</source>
         <translation type="obsolete">Sorry, we can&apos;t preview this file</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.ui" line="14"/>
+        <location filename="../gui/previewselectdialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation type="unfinished">Preview selection</translation>
     </message>

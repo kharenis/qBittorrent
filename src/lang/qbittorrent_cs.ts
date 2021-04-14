@@ -6624,7 +6624,7 @@ Tyto pluginy byly vypnuty.</translation>
         <translation>Je nám líto, nemůžeme zobrazit náhled tohoto souboru: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.ui" line="14"/>
+        <location filename="../gui/previewselectdialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation>Výběr náhledu</translation>
     </message>

@@ -6656,7 +6656,7 @@ Questi plugin verranno disabilitati.</translation>
         <translation>Non è possibile visualizzare l&apos;anteprima di questo file: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.ui" line="14"/>
+        <location filename="../gui/previewselectdialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation>Selezione anteprima</translation>
     </message>

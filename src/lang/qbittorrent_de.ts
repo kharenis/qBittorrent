@@ -6628,7 +6628,7 @@ Diese Plugins wurden jetzt aber deaktiviert.</translation>
         <translation>Es kann leider keine Vorschau für diese Datei erstellt werden: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.ui" line="14"/>
+        <location filename="../gui/previewselectdialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation>Vorschau Auswahl</translation>
     </message>

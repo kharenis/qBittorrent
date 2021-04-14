@@ -6624,7 +6624,7 @@ Those plugins were disabled.</source>
         <translation>סליחה, בלתי ניתן להציג מראש קובץ זה: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.ui" line="14"/>
+        <location filename="../gui/previewselectdialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation>הצג מראש בחירה</translation>
     </message>

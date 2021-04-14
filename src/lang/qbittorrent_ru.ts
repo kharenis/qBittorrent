@@ -6627,7 +6627,7 @@ Those plugins were disabled.</source>
         <translation>Извините, предпросмотр этого файла невозможен: «%1».</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.ui" line="14"/>
+        <location filename="../gui/previewselectdialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation>Выбор предпросмотра</translation>
     </message>

@@ -6622,7 +6622,7 @@ Those plugins were disabled.</source>
         <translation>За съжаление, не можем да направим преглед този файл: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.ui" line="14"/>
+        <location filename="../gui/previewselectdialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation>Оглед на избраното</translation>
     </message>

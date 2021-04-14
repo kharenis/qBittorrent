@@ -6626,7 +6626,7 @@ Plugin hauek ezgaituta daude.</translation>
         <translation>Barkatu, ezin dugu agiri honen aurreikuspenik egin: &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.ui" line="14"/>
+        <location filename="../gui/previewselectdialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation>Aurreikuspen hautapena</translation>
     </message>

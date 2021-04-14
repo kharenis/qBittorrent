@@ -6627,7 +6627,7 @@ De uavinstallerbare programtilleggene ble avskrudd.</translation>
         <translation>Denne fila kan ikke forhåndsvises: «%1».</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.ui" line="14"/>
+        <location filename="../gui/previewselectdialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation>Forhåndsvis utvalg</translation>
     </message>

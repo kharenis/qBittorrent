@@ -6625,7 +6625,7 @@ Those plugins were disabled.</source>
         <translation>Žal predogled te datoteke ni mogoč: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.ui" line="14"/>
+        <location filename="../gui/previewselectdialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation>Predogled izbire</translation>
     </message>

@@ -6630,7 +6630,7 @@ Those plugins were disabled.</source>
         <translation>Lo siento, no se puede previsualizar este archivo: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.ui" line="14"/>
+        <location filename="../gui/previewselectdialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation>Previsualizar la selección</translation>
     </message>

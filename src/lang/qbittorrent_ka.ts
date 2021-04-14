@@ -7041,7 +7041,7 @@ Those plugins were disabled.</source>
         <translation type="obsolete">ბოდიში, ჩვენ არ შეგვიძლია ამ ფაილის გადახედვა</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.ui" line="14"/>
+        <location filename="../gui/previewselectdialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation type="unfinished">არჩეულის გადახედვა</translation>
     </message>

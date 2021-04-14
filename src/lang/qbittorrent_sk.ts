@@ -6625,7 +6625,7 @@ Tieto moduly však boli vypnuté.</translation>
         <translation>Je nám ľúto, nemôžeme zobraziť náhľad tohto súboru: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.ui" line="14"/>
+        <location filename="../gui/previewselectdialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation>Výber náhľadu</translation>
     </message>

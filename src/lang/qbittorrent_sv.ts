@@ -6625,7 +6625,7 @@ Dessa insticksmoduler inaktiverades.</translation>
         <translation>Tyvärr kan vi inte förhandsgranska den här filen: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.ui" line="14"/>
+        <location filename="../gui/previewselectdialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation>Förhandsvisa val</translation>
     </message>

@@ -6615,7 +6615,7 @@ Valitut alkuperäisliitännäiset ovat poistettu käytöstä.</translation>
         <translation>Valitettavasti tätä tiedostoa ei voi esikatsella: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.ui" line="14"/>
+        <location filename="../gui/previewselectdialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation type="unfinished"></translation>
     </message>

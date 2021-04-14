@@ -6624,7 +6624,7 @@ Pemalam tersebut telah dilumpuhkan.</translation>
         <translation>Maaf, kami tidak dapat pratonton fail ini: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.ui" line="14"/>
+        <location filename="../gui/previewselectdialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation>Pratonton pemilihan</translation>
     </message>

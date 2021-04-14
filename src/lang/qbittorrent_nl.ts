@@ -6626,7 +6626,7 @@ Deze plugins zijn uitgeschakeld.</translation>
         <translation>Sorry, we kunnen geen voorbeeld weergeven van dit bestand: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.ui" line="14"/>
+        <location filename="../gui/previewselectdialog.ui" line="14"/>
         <source>Preview selection</source>
         <translation>Voorbeeld van selectie weergeven</translation>
     </message>
