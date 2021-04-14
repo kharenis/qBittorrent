@@ -267,8 +267,8 @@ void WebApplication::doProcessPath()
         }
         else
         {
-        //Set location header for redirect
-            m_response.headers[Http::HEADER_LOCATION] = m_basePath + m_request.path;
+            //Set location header for redirect
+            setHeader({Http::HEADER_LOCATION, m_basePath + m_request.path});
             throw SeeOtherHTTPError(m_basePath + m_request.path);
         }
     }
