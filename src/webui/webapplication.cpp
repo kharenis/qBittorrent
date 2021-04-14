@@ -270,9 +270,6 @@ void WebApplication::doProcessPath()
             //Set location header for redirect
             setHeader({Http::HEADER_LOCATION, m_basePath + m_request.path});
 
-            //Clear cached files as they'll need a new BASEPATH
-            m_translatedFiles.clear();
-
             throw SeeOtherHTTPError(m_basePath + m_request.path);
         }
     }
@@ -341,9 +338,10 @@ void WebApplication::configure()
     const auto *pref = Preferences::instance();
 
     const bool isAltUIUsed = pref->isAltWebUiEnabled();
+    const QString basePath = pref->getWebUIBasePath();
     const QString rootFolder = Utils::Fs::expandPathAbs(
                 !isAltUIUsed ? WWW_FOLDER : pref->getWebUiRootFolder());
-    if ((isAltUIUsed != m_isAltUIUsed) || (rootFolder != m_rootFolder))
+    if ((isAltUIUsed != m_isAltUIUsed) || (rootFolder != m_rootFolder) || (basePath != m_basePath))
     {
         m_isAltUIUsed = isAltUIUsed;
         m_rootFolder = rootFolder;
