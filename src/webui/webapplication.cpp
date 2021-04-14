@@ -130,6 +130,7 @@ WebApplication::WebApplication(QObject *parent)
 
     declarePublicAPI(QLatin1String("auth/login"));
 
+    fireOnceConfigure();
     configure();
     connect(Preferences::instance(), &Preferences::changed, this, &WebApplication::configure);
 }
@@ -158,9 +159,9 @@ void WebApplication::sendWebUIFile()
 
     const QString path
     {
-        (request().path != QLatin1String("/")
-                ? request().path
-                : QLatin1String("/index.html"))
+        (request().path.isEmpty() || request().path == QLatin1String("/")
+                ? QLatin1String("/index.html")
+                : request().path)
     };
 
     QString localPath
@@ -238,6 +239,7 @@ void WebApplication::translateDocument(QString &data) const
 
         data.replace(QLatin1String("${LANG}"), m_currentLocale.left(2));
         data.replace(QLatin1String("${CACHEID}"), m_cacheID);
+        data.replace(QLatin1String("${BASEPATH}"), m_basePath);
     }
 }
 
@@ -254,6 +256,24 @@ const Http::Request &WebApplication::request() const
 const Http::Environment &WebApplication::env() const
 {
     return m_env;
+}
+
+void WebApplication::doProcessPath()
+{
+    if(!m_basePath.isEmpty())
+    {
+        if(m_request.path.indexOf(m_basePath) == 0)
+        {
+            m_request.path.remove(0, m_basePath.length());
+        }
+        else
+        {
+            //Set location header for redirect
+            setHeader({Http::HEADER_LOCATION, m_basePath + m_request.path});
+
+            throw SeeOtherHTTPError(m_basePath + m_request.path);
+        }
+    }
 }
 
 void WebApplication::doProcessRequest()
@@ -312,6 +332,13 @@ void WebApplication::doProcessRequest()
             Q_ASSERT(false);
         }
     }
+}
+
+//For configurations that require a restart to take effect
+void WebApplication::fireOnceConfigure()
+{
+    const auto *pref = Preferences::instance();
+    m_basePath = pref->getWebUIBasePath();
 }
 
 void WebApplication::configure()
@@ -495,6 +522,7 @@ Http::Response WebApplication::processRequest(const Http::Request &request, cons
         }
 
         sessionInitialize();
+        doProcessPath();
         doProcessRequest();
     }
     catch (const HTTPError &error)
