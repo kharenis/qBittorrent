@@ -244,13 +244,14 @@ void WebApplication::translateDocument(QString &data) const
             //Rewrite base paths
         if(!m_basePath.isEmpty())
         {
-            QString basePath = "/" + (m_basePath.indexOf('/') == 0)
+            QString basePath = "/" + ((m_basePath.indexOf('/') == 0)
                 ? m_basePath.mid(1)
-                : m_basePath;
+                : m_basePath);
     
             data.replace(QString("api/"), basePath + "/api/");
             data.replace(QString("css/"), basePath + "/css/");
             data.replace(QString("images/"), basePath + "/images/");
+            data.replace(QString("icons/"), basePath + "/icons/");
             data.replace(QString("scripts/"), basePath + "/scripts/");
             data.replace(QString("views/"), basePath + "/views/");
         }
