@@ -244,10 +244,10 @@ void WebApplication::translateDocument(QString &data) const
         if(!m_basePath.isEmpty())
         {
             data.replace(QLatin1String("api/"), m_basePath + "/api/");
-            data.replace(QLatin1String("api/"), m_basePath + "/css/");
-            data.replace(QLatin1String("api/"), m_basePath + "/images/");
-            data.replace(QLatin1String("api/"), m_basePath + "/scripts/");
-            data.replace(QLatin1String("api/"), m_basePath + "/views/");
+            data.replace(QLatin1String("css/"), m_basePath + "/css/");
+            data.replace(QLatin1String("images/"), m_basePath + "/images/");
+            data.replace(QLatin1String("scripts/"), m_basePath + "/scripts/");
+            data.replace(QLatin1String("views/"), m_basePath + "/views/");
         }
         
     }
