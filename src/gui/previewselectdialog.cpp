@@ -42,7 +42,7 @@
 #include "base/utils/fs.h"
 #include "base/utils/misc.h"
 #include "previewlistdelegate.h"
-#include "ui_PreviewSelectDialog.h"
+#include "ui_previewselectdialog.h"
 #include "utils.h"
 
 #define SETTINGS_KEY(name) "PreviewSelectDialog/" name
