@@ -238,23 +238,22 @@ void WebApplication::translateDocument(QString &data) const
         }
 
         data.replace(QLatin1String("${LANG}"), m_currentLocale.left(2));
-        data.replace(QLatin1String("${CACHEID}"), m_cacheID);
+        data.replace(QLatin1String("${CACHEID}"), m_cacheID);        
+    }
 
-        //Rewrite base paths
+            //Rewrite base paths
         if(!m_basePath.isEmpty())
         {
-            QString basePath = (m_basePath.indexOf('/') == 0)
+            QString basePath = "/" + (m_basePath.indexOf('/') == 0)
                 ? m_basePath.mid(1)
                 : m_basePath;
     
-            data.replace(QRegularExpression("[^/]api/"), "/" + basePath + "/api/");
-            data.replace(QRegularExpression("[^/]css/"), "/" + basePath + "/css/");
-            data.replace(QRegularExpression("[^/]images/"), "/" + basePath + "/images/");
-            data.replace(QRegularExpression("[^/]scripts/"), "/" + basePath + "/scripts/");
-            data.replace(QRegularExpression("[^/]views/"), "/" + basePath + "/views/");
+            data.replace(QString("api/"), basePath + "/api/");
+            data.replace(QString("css/"), basePath + "/css/");
+            data.replace(QString("images/"), basePath + "/images/");
+            data.replace(QString("scripts/"), basePath + "/scripts/");
+            data.replace(QString("views/"), basePath + "/views/");
         }
-        
-    }
 }
 
 WebSession *WebApplication::session()
