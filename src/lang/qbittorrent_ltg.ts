@@ -6551,37 +6551,37 @@ Those plugins were disabled.</source>
 <context>
     <name>PreviewSelectDialog</name>
     <message>
-        <location filename="../gui/PreviewSelectDialog.cpp" line="59"/>
+        <location filename="../gui/previewselectdialog.cpp" line="59"/>
         <source>The following files from torrent &quot;%1&quot; support previewing, please select one of them:</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.cpp" line="62"/>
+        <location filename="../gui/previewselectdialog.cpp" line="62"/>
         <source>Preview</source>
         <translation>Apsvavērt</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.cpp" line="70"/>
+        <location filename="../gui/previewselectdialog.cpp" line="70"/>
         <source>Name</source>
         <translation>Pasauka</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.cpp" line="71"/>
+        <location filename="../gui/previewselectdialog.cpp" line="71"/>
         <source>Size</source>
         <translation>Lelums</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.cpp" line="72"/>
+        <location filename="../gui/previewselectdialog.cpp" line="72"/>
         <source>Progress</source>
         <translation>Progress</translation>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.cpp" line="137"/>
+        <location filename="../gui/previewselectdialog.cpp" line="137"/>
         <source>Preview impossible</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../gui/PreviewSelectDialog.cpp" line="138"/>
+        <location filename="../gui/previewselectdialog.cpp" line="138"/>
         <source>Sorry, we can&apos;t preview this file: &quot;%1&quot;.</source>
         <translation type="unfinished"/>
     </message>

@@ -60,7 +60,7 @@
 #include "deletionconfirmationdialog.h"
 #include "mainwindow.h"
 #include "optionsdialog.h"
-#include "PreviewSelectDialog.h"
+#include "previewselectdialog.h"
 #include "speedlimitdialog.h"
 #include "torrentcategorydialog.h"
 #include "torrentoptionsdialog.h"

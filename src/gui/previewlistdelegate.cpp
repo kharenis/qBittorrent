@@ -33,7 +33,7 @@
 #include <QStyleOptionViewItem>
 
 #include "base/utils/misc.h"
-#include "PreviewSelectDialog.h"
+#include "previewselectdialog.h"
 
 PreviewListDelegate::PreviewListDelegate(QObject *parent)
     : QItemDelegate(parent)

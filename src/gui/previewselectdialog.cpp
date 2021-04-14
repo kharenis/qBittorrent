@@ -26,7 +26,7 @@
  * exception statement from your version.
  */
 
-#include "PreviewSelectDialog.h"
+#include "previewselectdialog.h"
 
 #include <QFile>
 #include <QHeaderView>
