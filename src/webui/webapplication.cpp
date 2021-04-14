@@ -243,11 +243,15 @@ void WebApplication::translateDocument(QString &data) const
         //Rewrite base paths
         if(!m_basePath.isEmpty())
         {
-            data.replace(QRegularExpression("[^/]api/"), m_basePath + "/api/");
-            data.replace(QRegularExpression("[^/]css/"), m_basePath + "/css/");
-            data.replace(QRegularExpression("[^/]images/"), m_basePath + "/images/");
-            data.replace(QRegularExpression("[^/]scripts/"), m_basePath + "/scripts/");
-            data.replace(QRegularExpression("[^/]views/"), m_basePath + "/views/");
+            QString basePath = (m_basePath.indexOf('/') == 0)
+                ? QString(m_basePath).remove(0)
+                : m_basePath;
+
+            data.replace(QRegularExpression("[^/]api/"), basePath + "/api/");
+            data.replace(QRegularExpression("[^/]css/"), basePath + "/css/");
+            data.replace(QRegularExpression("[^/]images/"), basePath + "/images/");
+            data.replace(QRegularExpression("[^/]scripts/"), basePath + "/scripts/");
+            data.replace(QRegularExpression("[^/]views/"), basePath + "/views/");
         }
         
     }
