@@ -244,7 +244,7 @@ void WebApplication::translateDocument(QString &data) const
         if(!m_basePath.isEmpty())
         {
             QString basePath = (m_basePath.indexOf('/') == 0)
-                ? QString(m_basePath).remove(0)
+                ? m_basePath.mid(1)
                 : m_basePath;
 
             data.replace(QRegularExpression("[^/]api/"), basePath + "/api/");
