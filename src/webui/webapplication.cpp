@@ -257,6 +257,27 @@ const Http::Environment &WebApplication::env() const
     return m_env;
 }
 
+void WebApplication::doProcessPath()
+{
+    if(!m_basePath.isEmpty())
+    {
+        if(m_request.path.indexOf(m_basePath) == 0)
+        {
+            m_request.path.remove(0, m_basePath.length());
+        }
+        else
+        {
+            throw SeeOtherHTTPError(m_basePath + m_request.path);
+        }
+    }
+
+    //if(!m_basePath.isEmpty() && m_request.path.indexOf(m_basePath) == 0)
+    //    m_request.path.remove(0, m_basePath.length());
+    //
+    //if(m_request.path.isEmpty())
+    //    m_request.path = "/";
+}
+
 void WebApplication::doProcessRequest()
 {
     const QRegularExpressionMatch match = m_apiPathPattern.match(request().path);
@@ -497,13 +518,7 @@ Http::Response WebApplication::processRequest(const Http::Request &request, cons
         }
 
         sessionInitialize();
-
-        if(!m_basePath.isEmpty() && m_request.path.indexOf(m_basePath) == 0)
-            m_request.path.remove(0, m_basePath.length());
-
-        if(m_request.path.isEmpty())
-            m_request.path = "/";
-
+        doProcessPath();
         doProcessRequest();
     }
     catch (const HTTPError &error)

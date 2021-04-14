@@ -97,6 +97,7 @@ public:
 
 private:
     void doProcessRequest();
+    void doProcessPath();
     void configure();
 
     void registerAPIController(const QString &scope, APIController *controller);
